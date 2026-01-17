@@ -1,8 +1,8 @@
 # Báo cáo thực hành môn Kiểm Thử Phần Mềm 
 
 **Họ và tên:** Nguyễn Tuấn Hưng  
-**Mã sinh viên:** BIT230186
-**Lớp:** 23IT-SOFT2
+**Mã sinh viên:** BIT230186  
+**Lớp:** 23IT-SOFT2  
 **Email:** hungnn91296@gmail.com
 
 ## Tuần 1 - Trải nghiệm chất lượng giao diện người dùng
