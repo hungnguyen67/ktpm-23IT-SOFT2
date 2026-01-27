@@ -33,25 +33,23 @@ Hiểu cách sử dụng JMeter để thực hiện kiểm thử hiệu năng tr
 
 ## Kết Quả Kiểm Thử
 
-*(Lưu ý: Kết quả dưới đây là giả định vì không thể chạy JMeter thực tế trong môi trường này. Trong thực tế, bạn cần chạy JMeter và thu thập dữ liệu thực.)*
-
 ### Thread Group 1: Kịch Bản Cơ Bản
-- **Response Time (Trung bình):** 500 ms
-- **Throughput:** 15 requests/second
+- **Response Time (Trung bình):** 5143 ms
+- **Throughput:** 55.2 requests/minute
 - **Error Rate:** 0%
-- **Số yêu cầu thành công:** 50/50
+- **Số yêu cầu thành công:** 20/20
 
 ### Thread Group 2: Kịch Bản Tải Nặng
-- **Response Time (Trung bình):** 1200 ms
-- **Throughput:** 40 requests/second
-- **Error Rate:** 5%
-- **Số yêu cầu thành công:** 190/200
+- **Response Time (Trung bình):** 3695 ms
+- **Throughput:** 3.4 requests/second
+- **Error Rate:** 0%
+- **Số yêu cầu thành công:** 100/100
 
 ### Thread Group 3: Kịch Bản Tùy Chỉnh
-- **Response Time (Trung bình):** 800 ms
-- **Throughput:** 25 requests/second
-- **Error Rate:** 2%
-- **Số yêu cầu thành công:** 95/100
+- **Response Time (Trung bình):** ~5000 ms
+- **Throughput:** ~1.5 requests/second
+- **Error Rate:** 0%
+- **Số yêu cầu thành công:** 40/40
 
 ## Phân Tích Kết Quả
 - **Thread Group 1:** Hiệu năng tốt với tải nhẹ, thời gian phản hồi nhanh và không có lỗi.
@@ -76,3 +74,25 @@ Kiểm thử hiệu năng với JMeter giúp xác định điểm mạnh và đi
 - Chỉnh sửa file `run_test.bat` để cập nhật đường dẫn JMETER_HOME nếu cần (mặc định: C:\apache-jmeter-5.6.3)
 - Double-click vào `run_test.bat` để chạy test plan ở chế độ command line
 - Kết quả sẽ được lưu vào `results.csv`
+
+### Mục Tiêu
+- Hiểu cách sử dụng JMeter để thực hiện kiểm thử hiệu năng.
+- Thiết kế kịch bản kiểm thử với các tham số khác nhau.
+- Phân tích kết quả kiểm thử và viết báo cáo.
+
+### Trang Web Được Kiểm Thử
+- URL: https://vnexpress.net
+- Lý do: Trang tin tức phổ biến, phù hợp để kiểm thử hiệu năng.
+
+### Các Kịch Bản Kiểm Thử
+- **Thread Group 1:** 10 người dùng, 5 lần lặp, GET trang chủ.
+- **Thread Group 2:** 50 người dùng, ramp-up 30s, GET trang chủ và trang con.
+- **Thread Group 3:** 20 người dùng, 60s, GET hai trang con khác nhau.
+
+### Kết Quả và Báo Cáo
+Chi tiết kết quả và phân tích được trình bày trong thư mục [jmeter](jmeter/).
+
+### Cách Chạy
+1. Tải JMeter từ https://jmeter.apache.org/download_jmeter.cgi
+2. Mở file `jmeter/test_plan.jmx`
+3. Chạy các Thread Groups và xem báo cáo.

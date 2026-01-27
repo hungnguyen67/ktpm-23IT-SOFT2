@@ -170,25 +170,23 @@ Hiểu cách sử dụng JMeter để thực hiện kiểm thử hiệu năng tr
 
 ## Kết Quả Kiểm Thử
 
-*(Lưu ý: Kết quả dưới đây là giả định vì không thể chạy JMeter thực tế trong môi trường này. Trong thực tế, bạn cần chạy JMeter và thu thập dữ liệu thực.)*
-
 ### Thread Group 1: Kịch Bản Cơ Bản
-- **Response Time (Trung bình):** 500 ms
-- **Throughput:** 15 requests/second
+- **Response Time (Trung bình):** 5143 ms
+- **Throughput:** 55.2 requests/minute
 - **Error Rate:** 0%
-- **Số yêu cầu thành công:** 50/50
+- **Số yêu cầu thành công:** 20/20
 
 ### Thread Group 2: Kịch Bản Tải Nặng
-- **Response Time (Trung bình):** 1200 ms
-- **Throughput:** 40 requests/second
-- **Error Rate:** 5%
-- **Số yêu cầu thành công:** 190/200
+- **Response Time (Trung bình):** 3695 ms
+- **Throughput:** 3.4 requests/second
+- **Error Rate:** 0%
+- **Số yêu cầu thành công:** 100/100
 
 ### Thread Group 3: Kịch Bản Tùy Chỉnh
-- **Response Time (Trung bình):** 800 ms
-- **Throughput:** 25 requests/second
-- **Error Rate:** 2%
-- **Số yêu cầu thành công:** 95/100
+- **Response Time (Trung bình):** ~5000 ms
+- **Throughput:** ~1.5 requests/second
+- **Error Rate:** 0%
+- **Số yêu cầu thành công:** 40/40
 
 ## Phân Tích Kết Quả
 - **Thread Group 1:** Hiệu năng tốt với tải nhẹ, thời gian phản hồi nhanh và không có lỗi.
